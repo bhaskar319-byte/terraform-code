@@ -5,6 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "one"{
+    count         =3
     instance_type = "t2.micro"
     ami = "ami-06fa3f12191aa3337"
     tags = {
